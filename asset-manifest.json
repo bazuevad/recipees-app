@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/recipees-app/static/css/main.5f361e03.chunk.css",
+    "main.js": "/recipees-app/static/js/main.9459a09b.chunk.js",
+    "main.js.map": "/recipees-app/static/js/main.9459a09b.chunk.js.map",
+    "runtime-main.js": "/recipees-app/static/js/runtime-main.ddad8a9d.js",
+    "runtime-main.js.map": "/recipees-app/static/js/runtime-main.ddad8a9d.js.map",
+    "static/js/2.576a4c1c.chunk.js": "/recipees-app/static/js/2.576a4c1c.chunk.js",
+    "static/js/2.576a4c1c.chunk.js.map": "/recipees-app/static/js/2.576a4c1c.chunk.js.map",
+    "index.html": "/recipees-app/index.html",
+    "precache-manifest.58353f8f33652b410f8c6c5b61be79e8.js": "/recipees-app/precache-manifest.58353f8f33652b410f8c6c5b61be79e8.js",
+    "service-worker.js": "/recipees-app/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/recipees-app/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.576a4c1c.chunk.js.LICENSE.txt": "/recipees-app/static/js/2.576a4c1c.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ddad8a9d.js",
+    "static/js/2.576a4c1c.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.9459a09b.chunk.js"
+  ]
+}
