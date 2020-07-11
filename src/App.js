@@ -1,34 +1,61 @@
 import React, {useEffect,useState} from 'react';
 import './App.css';
 import Recipe from './Recipees' ;
+import $ from "jquery";
 
 const App = () => {
-  var APP_ID = '650b4ba9';
+  const DARIA = '650b4ba9';
   var APP_KEY = 'fe8e990ccf288435f9d7a0f88d403a7836';
-  var base_url = 'https://api.spoonacular.com/recipes/search?query=cheese&number=10&apiKey=a9e7a75fa0dd44368a600a3b7d20888d';
   
   const [recipees, setRecipees] = useState([]);
+  const [search,setSearch] = useState("");
+  const [query,setQuery] = useState("chicken");
+
+
   useEffect(()=>{
     getRecipes();
-  },[]);
+  },[query]);
+  var second_url = `https://api.edamam.com/search?q=${query}&app_id=650b4ba9&app_key=fe8e990ccf288435f9d7a0f88d403a78`;
+
+  const getSearch = e =>{
+    setSearch(e.target.value);
+    console.log(search);
+  };
 
   const getRecipes = async () => {
-    const response = await fetch(base_url);
+    const response = await fetch(second_url);
     const data = await response.json();
-    //console.log(data.results);
-    setRecipees(data.results);
-    console.log(data.results);
+    setRecipees(data.hits);
+    console.log(data.hits);
+    console.log('${DARIA}');
+    
+  };
 
+  const updateSearch = e => {
+    e.preventDefault();
+    setQuery(search);
+    setSearch("");
   }
   return (
-    <div className="App">
-      <form className = "search-form">
-        <input className = "search-input" type="text"/>
+   
+    <div className = "app">
+       <h3 className="header">Recipe app by Daria Bazueva</h3>
+      <form onSubmit={updateSearch} className = "search-form">
+        <input className = "search-input" type="text" value ={search} onChange={getSearch}/>
         <button className = "search-button" type = "submit">Search</button>
       </form>
+      <div className="recipe">
       {recipees.map(recipe =>(
-        <Recipe  />
-      ))};
+        <Recipe 
+          key = {recipe.recipe.label}
+          title = {recipe.recipe.label} 
+          time = {recipe.recipe.totalTime} 
+          image = {recipe.recipe.image}
+          ingredients = {recipe.recipe.ingredients}
+          url = {recipe.recipe.url}
+        />
+      ))}
+      </div>
     </div>
   );
 }
