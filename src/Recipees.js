@@ -6,15 +6,16 @@ import style from './recipe.module.css';
 const Recipe = ({title,time, image,ingredients,url}) => {
     return(
         <div className={style.recipe}>
-            <h1>{title}</h1>
+            <a href={url} className = {style.title}> {title} </a>
+            <img className = {style.img} src={image} alt = ""/>
             
-            <o1>
+            <o1 className = {style.ingr}>
                 {ingredients.map(ingredient => (
                     <li>{ingredient.text}</li>
                 ))}
             </o1>
-            <img className = {style.img} src={image} alt = ""/>
-            <a href={url}> Read full recipee here </a>
+            
+            
         </div>
     );
 }

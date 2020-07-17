@@ -1,6 +1,6 @@
 .app{
     min-height: 100vh;
-    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+    background-color: #fff8e7;
   }
   
   .search-form{
@@ -8,30 +8,30 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    outline: black;
+
   }
   
-  .search-bar{
-    width:50%;
-    border:none;
-  }
 
-.search-form{
-  min-height: 10vh;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .search-input{
-  width:50%;
-  border:none;
+  width:350pt;
   padding:10px;
+  border-color: rgb(95, 93, 93);
+  border-width: 1px;
+  outline: rgb(95, 93, 93);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .search-button{
-  background:lightcoral;
-  border:none;
+  background:#f08080;
   padding:10px 20px;
+  color:white;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-width: 1px;
+  outline: rgb(95, 93, 93);
 }
 
 .recipe{
@@ -41,5 +41,40 @@
 }
 
 .header{
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f08080;
+  height: 40px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.name{
+  justify-content: center;
+  color:white;
+}
+
+.about{
+  height:40pt;
+  background-color: #f08080;
+  margin: 0px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.code{
+  color:white;
+  
+}
+
+.me{
+  color:white;
+  padding:4em;
+}
+
+.projects{
+  color:white;
 }

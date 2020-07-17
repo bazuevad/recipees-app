@@ -39,7 +39,11 @@ const App = () => {
   return (
    
     <div className = "app">
-       <h3 className="header">Recipe app by Daria Bazueva</h3>
+      <h4 className="about">
+       <a href ="https://github.com/bazuevad/recipees-app/tree/master/src" className = "code">Code</a>
+       <a href ="https://www.linkedin.com/in/dariabazueva/" className = "me">Author</a>
+       <a href ="https://github.com/bazuevad" className = "projects">My Other Projects</a>
+      </h4>
       <form onSubmit={updateSearch} className = "search-form">
         <input className = "search-input" type="text" value ={search} onChange={getSearch}/>
         <button className = "search-button" type = "submit">Search</button>
